@@ -35,7 +35,7 @@
 - [x] #4.3 Test Drive part Three
 - [x] #4.4 Modifiers
 - [x] #4.5 Transitions
-- [ ] #4.6 Modifiers for Lists
+- [x] #4.6 Modifiers for Lists
 - [ ] #4.7 Modifiers for Forms
 - [ ] #4.8 More Modifiers
 - [ ] #4.9 Responsive Modifiers
