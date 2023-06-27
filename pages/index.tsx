@@ -2,17 +2,19 @@ import { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <div className="grid min-h-screen gap-10 px-20 py-20 font-semibold text-black bg-slate-400">
-      <div className="p-6 bg-white shadow-xl rounded-3xl sm:hover:bg-sky-200 sm:bg-red-400 md:bg-teal-400 lg:bg-indigo-400 xl:bg-yellow-200 2xl:bg-pink-300">
+    <div className="grid min-h-screen gap-10 px-20 py-20 font-semibold text-black xl:place-content-center lg:grid-cols-2 xl:grid-cols-3 bg-slate-400">
+      <div className="flex flex-col justify-between p-6 bg-white shadow-xl rounded-3xl">
         <span className="text-3xl ">Select Item</span>
-        <div className="flex justify-between my-2">
-          <span className="text-gray-500">Grey Chair</span>
-          <span>$19</span>
-        </div>
-        <div className="flex justify-between">
-          <span className="text-gray-500">Tooly Table</span>
-          <span>$80</span>
-        </div>
+        <ul>
+          <div className="flex justify-between my-2">
+            <span className="text-gray-500">Grey Chair</span>
+            <span>$19</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-gray-500">Tooly Table</span>
+            <span>$80</span>
+          </div>
+        </ul>
         <div className="flex justify-between pt-2 mt-2 border-t-2 border-dashed">
           <span>Total</span>
           <span>$99</span>
@@ -21,8 +23,8 @@ const Home: NextPage = () => {
           Checkout
         </button>
       </div>
-      <div className="overflow-hidden bg-white shadow-xl rounded-3xl">
-        <div className="p-6 bg-blue-500 pb-14">
+      <div className="overflow-hidden bg-white shadow-xl rounded-3xl group">
+        <div className="p-6 pb-14 xl:pb-40 landscape:bg-teal-500 portrait:bg-indigo-600">
           <span className="text-2xl text-white">Profile</span>
         </div>
         <div className="relative p-6 bg-white rounded-3xl -top-5">
@@ -31,7 +33,7 @@ const Home: NextPage = () => {
               <span className="text-sm text-gray-400">Orders</span>
               <span>340</span>
             </div>
-            <div className="w-24 h-24 bg-gray-300 rounded-full" />
+            <div className="w-24 h-24 bg-gray-300 rounded-full group-hover:bg-red-300" />
             <div className="flex flex-col items-center">
               <span className="text-sm text-gray-400">Spent</span>
               <span>$2,310</span>
@@ -43,7 +45,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="p-6 bg-white shadow-xl rounded-3xl ">
+      <div className="p-6 bg-white shadow-xl lg:col-span-2 xl:col-span-1 rounded-3xl">
         <div className="flex items-center justify-between mb-5">
           <span className="text-2xl">&larr;</span>
           <div className="space-x-3">
