@@ -38,7 +38,7 @@
 - [x] #4.6 Modifiers for Lists
 - [x] #4.7 Modifiers for Forms
 - [x] #4.8 More Modifiers
-- [ ] #4.9 Responsive Modifiers
+- [x] #4.9 Responsive Modifiers
 - [ ] #4.10 Responsive Modifiers part Two
 - [ ] #4.11 Dark Mode
 - [ ] #4.12 Just In Time Compiler
