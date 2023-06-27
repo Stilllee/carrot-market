@@ -42,7 +42,7 @@
 - [x] #4.10 Responsive Modifiers part Two
 - [x] #4.11 Dark Mode
 - [x] #4.12 Just In Time Compiler
-- [ ] #4.13 Conclusions
+- [x] #4.13 Conclusions
 
 ---
 
