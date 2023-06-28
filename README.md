@@ -48,8 +48,8 @@
 
 ### #5 TAILWIND PRACTICE
 
-- [ ] #5.0 Introduction
-- [ ] #5.1 Auth part One
+- [x] #5.0 Introduction
+- [x] #5.1 Auth part One
 - [ ] #5.2 Auth part Two
 - [ ] #5.3 Home Screen
 - [ ] #5.4 Item Detail
