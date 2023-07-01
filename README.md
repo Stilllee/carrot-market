@@ -50,7 +50,7 @@
 
 - [x] #5.0 Introduction
 - [x] #5.1 Auth part One
-- [ ] #5.2 Auth part Two
+- [x] #5.2 Auth part Two
 - [ ] #5.3 Home Screen
 - [ ] #5.4 Item Detail
 - [ ] #5.5 Upload Item
