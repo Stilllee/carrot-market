@@ -26,10 +26,10 @@ const ItemDetail: NextPage = () => {
             motherfucker to get shot. You understand?
           </p>
           <div className="flex items-center justify-between space-x-2">
-            <button className="transition-colors flex-1 bg-[#0984e3] py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-[#0984e3] hover:bg-[#0069b9]">
+            <button className="flex-1 py-3 transition-colors rounded-md bg-main-blue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-main-blue hover:bg-hover-blue">
               Talk to seller
             </button>
-            <button className="flex items-center justify-center p-3 hover:bg-white hover:text-[#0984e3] text-gray-500 rounded-md transition-colors">
+            <button className="flex items-center justify-center p-3 text-gray-500 transition-colors rounded-md hover:bg-white hover:text-main-blue">
               <svg
                 className="w-6 h-6 "
                 xmlns="http://www.w3.org/2000/svg"

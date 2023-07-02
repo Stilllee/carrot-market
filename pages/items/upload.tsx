@@ -45,11 +45,11 @@ const Upload: NextPage = () => {
       <div>
         <label className="block mb-1 text-sm">Description</label>
         <textarea
-          className="w-full mt-1 bg-black shadow-sm shadow-white focus:ring-[#0984e3] rounded-md border-gray-500 focus:border-[#0984e3]"
+          className="w-full mt-1 bg-black border-gray-500 rounded-md shadow-sm shadow-white focus:ring-main-blue focus:border-mainring-main-blue"
           rows={4}
         />
       </div>
-      <button className="w-full transition-colors mt-5 bg-[#0984e3] py-2 px-4 hover:bg-[#0069b9] border-transparent rounded-md shadow-sm shadow-white text-sm focus:ring-2 focus:ring-offset-black focus:ring-offset-2 focus:ring-[#0984e3] focus:outline-none">
+      <button className="w-full px-4 py-2 mt-5 text-sm transition-colors border-transparent rounded-md shadow-sm bg-mainring-main-blue hover:bg-hover-blue shadow-white focus:ring-2 focus:ring-offset-black focus:ring-offset-2 focus:ring-main-blue focus:outline-none">
         Upload product
       </button>
     </div>
