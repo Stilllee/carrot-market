@@ -59,7 +59,7 @@
 - [x] #5.7 Write
 - [x] #5.8 Chats
 - [x] #5.9 Chat Detail
-- [ ] #5.10 Profile
+- [x] #5.10 Profile
 - [ ] #5.11 Bought, Loved and Sold
 - [ ] #5.12 Edit Profile
 - [ ] #5.13 Streams
