@@ -40,13 +40,14 @@ export default function Enter() {
           </div>
         </div>
         <form className="flex flex-col mt-8">
-          <label className="text-sm">
+          <label htmlFor="input" className="text-sm">
             {method === "email" ? "Email address" : null}
             {method === "phone" ? "Phone number" : null}
           </label>
           <div className="mt-1">
             {method === "email" ? (
               <input
+                id="input"
                 type="email"
                 className="w-full px-3 py-2 placeholder-gray-400 bg-black border border-gray-100 rounded-md shadow-sm shadow-white appearance-none focus:ring-[#0984e3] focus:outline-none focue:border-[#0984e3]"
                 required
@@ -58,6 +59,7 @@ export default function Enter() {
                   +82
                 </span>
                 <input
+                  id="input"
                   className="w-full px-3 py-2 placeholder-gray-400 bg-black border border-gray-100 rounded-md rounded-l-none shadow-white shadow-sm appearance-none focus:ring-[#0984e3] focus:outline-none focue:border-[#0984e3]"
                   type="number"
                   required
@@ -65,7 +67,7 @@ export default function Enter() {
               </div>
             ) : null}
           </div>
-          <button className="transition-colors mt-5 bg-[#0984e3] py-2 px-4 hover:bg-[#0069b9] border-transparent rounded-md shadow-sm shadow-white text-sm focus:ring-2 focus:ring-offset-black focus:ring-offset-2 focus:ring-[#0984e3] focus:outline-none ">
+          <button className="transition-colors mt-5 bg-[#0984e3] py-2 px-4 hover:bg-[#0069b9] border-transparent rounded-md shadow-sm shadow-white text-sm focus:ring-2 focus:ring-offset-black focus:ring-offset-2 focus:ring-[#0984e3] focus:outline-none">
             {method === "email" ? "Get login link" : null}
             {method === "phone" ? "Get one-time password" : null}
           </button>
