@@ -27,13 +27,13 @@ const Upload: NextPage = () => {
         <label htmlFor="price" className="block mb-1 text-sm">
           Price
         </label>
-        <div className="relative flex items-center rounded-md shadow-sm shadow-white">
+        <div className="relative flex items-center rounded-md shadow-sm ">
           <div className="absolute left-0 flex items-center justify-center pl-3 pointer-events-none ">
             <span className="text-sm text-gray-300">$</span>
           </div>
           <input
             id="price"
-            className="pl-7 w-full px-3 py-2 placeholder-gray-400 bg-black border border-gray-100 rounded-md shadow-sm shadow-white appearance-none focus:ring-[#0984e3] focus:outline-none focue:border-[#0984e3]"
+            className="pl-7 w-full px-3 py-2 placeholder-gray-400 bg-black border border-gray-100 rounded-md shadow-sm   appearance-none focus:ring-[#0984e3] focus:outline-none focue:border-[#0984e3]"
             type="text"
             placeholder="0.00"
           />
@@ -45,11 +45,11 @@ const Upload: NextPage = () => {
       <div>
         <label className="block mb-1 text-sm">Description</label>
         <textarea
-          className="w-full mt-1 bg-black border-gray-500 rounded-md shadow-sm shadow-white focus:ring-main-blue focus:border-mainring-main-blue"
+          className="w-full mt-1 bg-black border-gray-500 rounded-md shadow-sm focus:ring-main-blue focus:border-mainring-main-blue"
           rows={4}
         />
       </div>
-      <button className="w-full px-4 py-2 mt-5 text-sm transition-colors border-transparent rounded-md shadow-sm bg-main-blue ring-main-blue hover:bg-hover-blue shadow-white focus:ring-2 focus:ring-offset-black focus:ring-offset-2 focus:ring-main-blue focus:outline-none">
+      <button className="w-full px-4 py-2 mt-5 text-sm transition-colors border-transparent rounded-md shadow-sm bg-main-blue ring-main-blue hover:bg-hover-blue focus:ring-2 focus:ring-offset-black focus:ring-offset-2 focus:ring-main-blue focus:outline-none">
         Upload product
       </button>
     </div>
