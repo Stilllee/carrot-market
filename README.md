@@ -61,7 +61,7 @@
 - [x] #5.9 Chat Detail
 - [x] #5.10 Profile
 - [x] #5.11 Bought, Loved and Sold
-- [ ] #5.12 Edit Profile
+- [x] #5.12 Edit Profile
 - [ ] #5.13 Streams
 - [ ] #5.14 Stream
 - [ ] #5.15 Add Stream
