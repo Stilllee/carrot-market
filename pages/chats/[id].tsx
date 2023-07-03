@@ -1,30 +1,16 @@
 import Layout from "@/components/layout";
+import Message from "@/components/message";
 import type { NextPage } from "next";
 
 const ChatDetail: NextPage = () => {
   return (
-    <Layout canGoBack>
-      <div className="px-4 py-4 pb-16 space-y-4">
-        <div className="flex items-start space-x-2">
-          <div className="w-8 h-8 rounded-full bg-slate-400" />
-          <div className="w-1/2 p-2 text-sm text-gray-300 border border-gray-700 rounded-md">
-            <p>Hi how much are you selling them for?</p>
-          </div>
-        </div>
-        <div className="flex flex-row-reverse items-start space-x-2 space-x-reverse">
-          <div className="w-8 h-8 rounded-full bg-slate-400" />
-          <div className="w-1/2 p-2 text-sm text-gray-300 border border-gray-700 rounded-md">
-            <p>I want ￦20,000</p>
-          </div>
-        </div>
-        <div className="flex items-start space-x-2">
-          <div className="w-8 h-8 rounded-full bg-slate-400" />
-          <div className="w-1/2 p-2 text-sm text-gray-300 border border-gray-700 rounded-md">
-            <p>미쳤어</p>
-          </div>
-        </div>
-        <div className="fixed inset-x-0 w-full max-w-md mx-auto bottom-2">
-          <div className="relative flex items-center">
+    <Layout canGoBack title="Steve">
+      <div className="px-4 py-10 pb-16 space-y-4">
+        <Message message="Hi how much are you selling them for?" />
+        <Message message="I want ￦20,000" reversed />
+        <Message message="미쳤어" />
+        <form className="fixed inset-x-0 bottom-0 py-2">
+          <div className="relative flex items-center w-full max-w-md mx-auto">
             <input
               type="text"
               className="w-full pr-12 bg-black border-gray-700 rounded-full shadow-sm focus:ring-main-blue focus:outline-none focus:border-main-blue"
@@ -35,7 +21,7 @@ const ChatDetail: NextPage = () => {
               </button>
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </Layout>
   );
