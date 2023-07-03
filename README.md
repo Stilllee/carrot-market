@@ -62,7 +62,7 @@
 - [x] #5.10 Profile
 - [x] #5.11 Bought, Loved and Sold
 - [x] #5.12 Edit Profile
-- [ ] #5.13 Streams
+- [x] #5.13 Streams
 - [ ] #5.14 Stream
 - [ ] #5.15 Add Stream
 - [ ] #5.16 Layout part One
