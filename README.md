@@ -65,7 +65,7 @@
 - [x] #5.13 Streams
 - [x] #5.14 Stream
 - [x] #5.15 Add Stream
-- [ ] #5.16 Layout part One
+- [x] #5.16 Layout part One
 - [ ] #5.17 Layout part Two
 - [ ] #5.18 Conclusions
 
