@@ -4,11 +4,11 @@ import type { NextPage } from "next";
 const Home: NextPage = () => {
   return (
     <Layout title="홈" hasTabBar>
-      <div className="flex flex-col space-y-5">
+      <div className="flex flex-col space-y-5 divide-y divide-gray-800">
         {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
           <div
             key={i}
-            className="flex justify-between px-4 pb-4 border-b border-gray-400 cursor-pointer"
+            className="flex justify-between px-4 pt-5 border-gray-400 cursor-pointer"
           >
             <div className="flex space-x-4">
               <div className="w-20 h-20 bg-gray-400 rounded-md" />
