@@ -90,7 +90,7 @@
 - [x] #7.0 Introduction
 - [x] #7.1 Making Forms Alone
 - [x] #7.2 The Register Function
-- [ ] #7.3 Validation
+- [x] #7.3 Validation
 - [ ] #7.4 Validation part Two
 - [ ] #7.5 Errors
 - [ ] #7.6 Extras
