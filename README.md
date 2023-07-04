@@ -76,8 +76,8 @@
 - [x] #6.0 Before We Start
 - [x] #6.1 What is Prisma
 - [x] #6.2 Prisma Setup
-- [ ] #6.3 What is PlanetScale
-- [ ] #6.4 Connecting to PlanetScale
+- [x] #6.3 What is PlanetScale
+- [x] #6.4 Connecting to PlanetScale
 - [ ] #6.5 Push To PlanetScale
 - [ ] #6.6 Prisma Client
 - [ ] #6.7 API Routes
