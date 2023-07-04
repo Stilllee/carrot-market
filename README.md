@@ -80,7 +80,7 @@
 - [x] #6.4 Connecting to PlanetScale
 - [x] #6.5 Push To PlanetScale
 - [x] #6.6 Prisma Client
-- [ ] #6.7 API Routes
+- [x] #6.7 API Routes
 - [ ] #6.8 Recap
 
 ---
