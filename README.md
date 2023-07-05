@@ -92,7 +92,7 @@
 - [x] #7.2 The Register Function
 - [x] #7.3 Validation
 - [x] #7.4 Validation part Two
-- [ ] #7.5 Errors
+- [x] #7.5 Errors
 - [ ] #7.6 Extras
 
 ---

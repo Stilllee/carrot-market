@@ -7,7 +7,13 @@ interface LoginForm {
 }
 
 export default function Forms() {
-  const { register, handleSubmit } = useForm<LoginForm>();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<LoginForm>({
+    mode: "onChange",
+  });
   const onValid = (data: LoginForm) => {
     console.log("통과!");
   };
@@ -17,6 +23,7 @@ export default function Forms() {
   return (
     <form onSubmit={handleSubmit(onValid, onInvalid)}>
       <input
+        className="bg-black"
         {...register("username", {
           required: "Username is required",
           minLength: {
@@ -28,13 +35,20 @@ export default function Forms() {
         placeholder="Username"
       />
       <input
+        className={`${Boolean(errors.email) ? "border-red-500" : ""} bg-black`}
         {...register("email", {
           required: "Email is required",
+          validate: {
+            notGmail: (value) =>
+              !value.includes("@gmail.com") || "Gmail is not allowed",
+          },
         })}
         type="email"
         placeholder="Email"
       />
+      {errors.email?.message}
       <input
+        className="bg-black"
         {...register("password", {
           required: "Password is required",
         })}
