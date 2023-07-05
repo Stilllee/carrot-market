@@ -1,9 +1,11 @@
+import { error } from "console";
 import { FieldErrors, useForm } from "react-hook-form";
 
 interface LoginForm {
   username: string;
   email: string;
   password: string;
+  errors?: string;
 }
 
 export default function Forms() {
@@ -11,15 +13,23 @@ export default function Forms() {
     register,
     handleSubmit,
     formState: { errors },
+    setError,
+    watch,
+    setValue,
+    resetField,
+    reset,
   } = useForm<LoginForm>({
     mode: "onChange",
   });
   const onValid = (data: LoginForm) => {
     console.log("통과!");
+    setError("username", { message: "Taken username" });
+    resetField("password");
   };
   const onInvalid = (errors: FieldErrors) => {
     console.log(errors);
   };
+
   return (
     <form onSubmit={handleSubmit(onValid, onInvalid)}>
       <input
@@ -34,8 +44,9 @@ export default function Forms() {
         type="text"
         placeholder="Username"
       />
+      {errors.username?.message}
       <input
-        className={`${Boolean(errors.email) ? "border-red-500" : ""} bg-black`}
+        className="bg-black"
         {...register("email", {
           required: "Email is required",
           validate: {
