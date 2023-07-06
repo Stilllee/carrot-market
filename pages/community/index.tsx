@@ -6,25 +6,25 @@ import FloatingButton from "@/components/floating-button";
 const Community: NextPage = () => {
   return (
     <Layout title="동네생활" hasTabBar>
-      <div className="space-y-4 divide-y-[2px] divide-gray-800">
+      <div className="space-y-4 divide-y-[2px] dark:divide-gray-800">
         {[1, 2, 3, 4, 5, 6].map((_, i) => (
           <Link
             key={i}
             href={`/community/${i}`}
             className="flex flex-col items-start pt-4 cursor-pointer"
           >
-            <span className="ml-4 flex items-center px-2.5 py-0.5 rounded-full text-xs bg-gray-900">
+            <span className="ml-4 flex items-center px-2.5 py-0.5 rounded-full text-xs bg-gray-200 dark:bg-gray-900 dark:text-gray-400">
               동네질문
             </span>
-            <div className="px-4 mt-2 text-gray-300">
+            <div className="px-4 mt-2 dark:text-gray-300">
               <span className="text-main-blue">Q.</span> What is the best mandu
               restaurant?
             </div>
-            <div className="flex items-center justify-between w-full px-4 mt-5 text-xs text-gray-400">
+            <div className="flex items-center justify-between w-full px-4 mt-5 text-xs dark:text-gray-400">
               <span>우디</span>
               <span>18시간 전</span>
             </div>
-            <div className="flex px-4 mt-3 space-x-5 text-gray-300 py-2.5 border-t w-full border-gray-800">
+            <div className="flex px-4 mt-3 space-x-5 dark:text-gray-300 py-2.5 border-t w-full dark:border-gray-800">
               <span className="flex items-center space-x-2 text-sm">
                 <svg
                   className="w-4 h-4"

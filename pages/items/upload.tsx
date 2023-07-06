@@ -9,7 +9,7 @@ const Upload: NextPage = () => {
     <Layout canGoBack title="Upload Product">
       <form className="px-4 py-4 space-y-5">
         <div>
-          <label className="flex items-center justify-center w-full h-48 text-gray-400 border-2 border-gray-400 border-dashed rounded-md cursor-pointer hover:text-main-blue hover:border-main-blue">
+          <label className="flex items-center justify-center w-full h-48 border-2 border-gray-400 border-dashed rounded-md cursor-pointer dark:text-gray-400 hover:text-main-blue hover:border-main-blue">
             <svg
               className="w-12 h-12"
               stroke="currentColor"

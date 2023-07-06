@@ -6,7 +6,7 @@ import type { NextPage } from "next";
 const Home: NextPage = () => {
   return (
     <Layout title="홈" hasTabBar>
-      <div className="flex flex-col space-y-5 divide-y divide-gray-800">
+      <div className="flex flex-col space-y-5 divide-y dark:divide-gray-800">
         {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
           <Item
             id={i}

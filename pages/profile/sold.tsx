@@ -5,7 +5,7 @@ import type { NextPage } from "next";
 const Sold: NextPage = () => {
   return (
     <Layout canGoBack title="판매내역">
-      <div className="flex flex-col pb-10 space-y-5 divide-y divide-gray-800">
+      <div className="flex flex-col pb-10 space-y-5 divide-y dark:divide-gray-800">
         {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
           <Item
             id={i}

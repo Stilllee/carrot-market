@@ -6,11 +6,11 @@ import FloatingButton from "@/components/floating-button";
 const Live: NextPage = () => {
   return (
     <Layout title="라이브" hasTabBar>
-      <div className="space-y-4 divide-y-2 divide-gray-800">
+      <div className="space-y-4 divide-y-2 dark:divide-gray-800">
         {[1, 1, 1, 1, 1, 1, 1].map((_, i) => (
           <Link href={`/live/${i}`} className="block px-4 pt-4" key={i}>
             <div className="w-full rounded-md shadow-sm bg-slate-300 aspect-video" />
-            <h1 className="mt-4 text-2xl font-bold text-gray-300">
+            <h1 className="mt-4 text-2xl font-bold dark:text-gray-300">
               Galaxy S50
             </h1>
           </Link>

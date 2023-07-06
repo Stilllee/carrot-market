@@ -32,7 +32,7 @@ export default function Forms() {
   return (
     <form onSubmit={handleSubmit(onValid, onInvalid)}>
       <input
-        className="bg-black"
+        className="dark:bg-black"
         {...register("username", {
           required: "Username is required",
           minLength: {

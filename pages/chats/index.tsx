@@ -5,17 +5,17 @@ import Link from "next/link";
 const Chats: NextPage = () => {
   return (
     <Layout title="채팅" hasTabBar>
-      <div className="divide-gray-800 divide-y-[1px]">
+      <div className="dark:divide-gray-800 divide-y-[1px]">
         {[1, 1, 1, 1, 1, 1, 1].map((_, i) => (
           <Link
             href={`/chats/${i}`}
             key={i}
-            className="flex items-center px-4 py-3 space-x-3 border-gray-400 cursor-pointer"
+            className="flex items-center px-4 py-3 space-x-3 cursor-pointer dark:border-gray-400"
           >
             <div className="w-12 h-12 rounded-full bg-slate-100" />
             <div>
-              <p className="text-gray-300 ">Steve Jebs</p>
-              <p className="text-sm text-gray-400">
+              <p className="dark:text-gray-300 ">Steve Jebs</p>
+              <p className="text-sm dark:text-gray-400">
                 See you tomorrow in the corner at 2pm!
               </p>
             </div>

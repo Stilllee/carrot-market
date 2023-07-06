@@ -9,8 +9,8 @@ const Profile: NextPage = () => {
         <div className="flex items-center space-x-3">
           <div className="w-16 h-16 rounded-full bg-slate-500 rounded-e-full" />
           <div className="flex flex-col">
-            <span>Steve Jebs</span>
-            <Link href="/profile/edit" className="text-sm text-gray-300">
+            <span className="dark:text-gray-200">Steve Jebs</span>
+            <Link href="/profile/edit" className="text-sm dark:text-gray-300">
               Edit profile &rarr;
             </Link>
           </div>
@@ -18,7 +18,7 @@ const Profile: NextPage = () => {
         <div className="flex justify-around mt-10">
           <Link href="/profile/sold">
             <div className="flex flex-col items-center">
-              <div className="flex items-center justify-center rounded-full w-14 h-14 bg-main-blue">
+              <div className="flex items-center justify-center text-white rounded-full w-14 h-14 bg-main-blue">
                 <svg
                   className="w-6 h-6"
                   fill="none"
@@ -34,12 +34,12 @@ const Profile: NextPage = () => {
                   ></path>
                 </svg>
               </div>
-              <span className="mt-2 text-sm text-gray-300">판매내역</span>
+              <span className="mt-2 text-sm dark:text-gray-300">판매내역</span>
             </div>
           </Link>
           <Link href="/profile/bought">
             <div className="flex flex-col items-center">
-              <div className="flex items-center justify-center rounded-full w-14 h-14 bg-main-blue">
+              <div className="flex items-center justify-center text-white rounded-full w-14 h-14 bg-main-blue">
                 <svg
                   className="w-6 h-6"
                   fill="none"
@@ -55,12 +55,12 @@ const Profile: NextPage = () => {
                   ></path>
                 </svg>
               </div>
-              <span className="mt-2 text-sm text-gray-300">구매내역</span>
+              <span className="mt-2 text-sm dark:text-gray-300">구매내역</span>
             </div>
           </Link>
           <Link href="/profile/loved">
             <div className="flex flex-col items-center">
-              <div className="flex items-center justify-center rounded-full w-14 h-14 bg-main-blue">
+              <div className="flex items-center justify-center text-white rounded-full w-14 h-14 bg-main-blue">
                 <svg
                   className="w-6 h-6"
                   fill="none"
@@ -76,7 +76,7 @@ const Profile: NextPage = () => {
                   ></path>
                 </svg>
               </div>
-              <span className="mt-2 text-sm text-gray-300">관심목록</span>
+              <span className="mt-2 text-sm dark:text-gray-300">관심목록</span>
             </div>
           </Link>
         </div>
@@ -84,7 +84,7 @@ const Profile: NextPage = () => {
           <div className="flex items-center space-x-4">
             <div className="w-12 h-12 rounded-full bg-slate-500" />
             <div>
-              <h4 className="text-sm text-gray-200">니꼬</h4>
+              <h4 className="text-sm dark:text-gray-200">니꼬</h4>
               <div className="flex items-center">
                 <svg
                   className="w-5 h-5 text-yellow-400"
@@ -134,7 +134,7 @@ const Profile: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className="mt-4 text-sm text-gray-400">
+          <div className="mt-4 text-sm dark:text-gray-400">
             <p>
               Normally, both your asses would be dead as fucking fried chicken,
               but you happen to pull this shit while I&apos;m in a transitional

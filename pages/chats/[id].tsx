@@ -13,10 +13,10 @@ const ChatDetail: NextPage = () => {
           <div className="relative flex items-center w-full max-w-md mx-auto">
             <input
               type="text"
-              className="w-full pr-12 bg-black border-gray-700 rounded-full shadow-sm focus:ring-main-blue focus:outline-none focus:border-main-blue"
+              className="w-full pr-12 border-gray-700 rounded-full shadow-sm dark:bg-black focus:ring-main-blue focus:outline-none focus:border-main-blue"
             />
             <div className="absolute inset-y-0 flex py-1.5 pr-1.5 right-0">
-              <button className="flex items-center px-3 text-sm rounded-full hover:bg-hover-blue bg-main-blue focus:ring-2 focus:ring-offset-black focus:ring-offset-2 focus:ring-main-blue focus:outline-none">
+              <button className="flex items-center px-3 text-sm text-white rounded-full hover:bg-hover-blue bg-main-blue focus:ring-2 dark:focus:ring-offset-black focus:ring-offset-2 focus:ring-main-blue focus:outline-none">
                 &rarr;
               </button>
             </div>

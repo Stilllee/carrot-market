@@ -21,12 +21,12 @@ export default function Item({
         <div className="flex space-x-4">
           <div className="w-20 h-20 bg-gray-400 rounded-md" />
           <div className="flex flex-col pt-2">
-            <h3 className="text-sm">{title}</h3>
-            <span className="mt-1">${price}</span>
+            <h3 className="text-sm dark:text-gray-300">{title}</h3>
+            <span className="mt-1 dark:text-gray-400">${price}</span>
           </div>
         </div>
         <div className="flex items-end justify-end space-x-2">
-          <div className="flex space-x-0.5 items-center text-sm text-gray-300">
+          <div className="flex space-x-0.5 items-center text-sm dark:text-gray-300">
             <svg
               className="w-4 h-4"
               fill="none"
@@ -43,7 +43,7 @@ export default function Item({
             </svg>
             <span>{hearts}</span>
           </div>
-          <div className="flex space-x-0.5 items-center text-sm text-gray-300">
+          <div className="flex space-x-0.5 items-center text-sm dark:text-gray-300">
             <svg
               className="w-4 h-4"
               fill="none"

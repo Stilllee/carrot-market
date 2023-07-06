@@ -8,17 +8,17 @@ const ItemDetail: NextPage = () => {
       <div className="px-4 py-4">
         <div className="mb-8">
           <div className="h-96 bg-slate-100" />
-          <div className="flex items-center py-3 space-x-3 border-t border-b border-gray-800 cursor-pointer">
+          <div className="flex items-center py-3 space-x-3 border-t border-b cursor-pointer dark:border-gray-800">
             <div className="w-12 h-12 rounded-full bg-slate-100" />
             <div>
-              <p className="text-sm text-gray-300">Steve Jebs</p>
-              <p className="text-xs text-gray-400">View profile &rarr;</p>
+              <p className="text-sm dark:text-gray-300">Steve Jebs</p>
+              <p className="text-xs dark:text-gray-400">View profile &rarr;</p>
             </div>
           </div>
           <div className="mt-5">
             <h1 className="text-3xl font-bold">Galaxy S50</h1>
             <span className="block mt-3 text-3xl">$140</span>
-            <p className="my-6 text-gray-300">
+            <p className="my-6 dark:text-gray-300">
               My money&apos;s in that office, right? If she start giving me some
               bullshit about it ain&apos;t there, and we got to go someplace
               else and get it, I&apos;m gonna shoot you in the head then and
@@ -30,7 +30,7 @@ const ItemDetail: NextPage = () => {
             </p>
             <div className="flex items-center justify-between space-x-2">
               <Button large text="Talk to seller" />
-              <button className="flex items-center justify-center p-3 text-gray-500 transition-colors rounded-md hover:bg-white hover:text-main-blue">
+              <button className="flex items-center justify-center p-3 text-gray-500 transition-colors rounded-md dark:hover:bg-white hover:bg-gray-200 hover:text-main-blue">
                 <svg
                   className="w-6 h-6 "
                   xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +56,7 @@ const ItemDetail: NextPage = () => {
             {[1, 2, 3, 4, 5, 6].map((_, i) => (
               <div key={i}>
                 <div className="w-full h-56 mt-6 mb-4 bg-slate-100" />
-                <h3 className="-mb-1 text-gray-300">Galaxy S60</h3>
+                <h3 className="-mb-1 dark:text-gray-300">Galaxy S60</h3>
                 <span className="text-mss">$6</span>
               </div>
             ))}
