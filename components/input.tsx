@@ -1,15 +1,21 @@
+import type { UseFormRegisterReturn } from "react-hook-form";
+
 interface InputProps {
   label: string;
   name: string;
   kind?: "text" | "phone" | "price";
-  [key: string]: any;
+  type: string;
+  register: UseFormRegisterReturn;
+  required: boolean;
 }
 
 export default function Input({
   label,
   name,
   kind = "text",
-  ...rest
+  type,
+  required,
+  register,
 }: InputProps) {
   return (
     <div>
@@ -23,7 +29,9 @@ export default function Input({
         <div className="relative flex items-center rounded-md shadow-sm">
           <input
             id={name}
-            {...rest}
+            required={required}
+            {...register}
+            type={type}
             className="w-full px-3 py-2 placeholder-gray-400 border rounded-md shadow-sm appearance-none dark:border-gray-100 dark:bg-black focus:outline-none focus:ring-main-blue focus:border-main-blue"
           />
         </div>
@@ -35,7 +43,9 @@ export default function Input({
           </div>
           <input
             id={name}
-            {...rest}
+            required={required}
+            {...register}
+            type={type}
             className="w-full px-3 py-2 placeholder-gray-400 border rounded-md shadow-sm appearance-none dark:border-gray-100 dark:bg-black pl-7 focus:outline-none focus:ring-main-blue focus:border-main-blue"
           />
           <div className="absolute right-0 flex items-center pr-3 pointer-events-none">
@@ -50,7 +60,9 @@ export default function Input({
           </span>
           <input
             id={name}
-            {...rest}
+            required={required}
+            {...register}
+            type={type}
             className="w-full px-3 py-2 placeholder-gray-400 border rounded-md rounded-l-none shadow-sm appearance-none dark:border-gray-100 dark:bg-black focus:outline-none focus:border-main-blue focus:ring-main-blue focue:border-main-blue"
           />
         </div>

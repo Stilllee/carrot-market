@@ -99,7 +99,7 @@
 
 ### #8 REFACTORING
 
-- [ ] #8.0 Enter Form
+- [x] #8.0 Enter Form
 - [ ] #8.1 Form Submission
 - [ ] #8.2 Clean Code part One
 - [ ] #8.3 Clean Code part Two
