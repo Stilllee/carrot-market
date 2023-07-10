@@ -9,6 +9,6 @@ export default async function handler(
   if (req.method !== "POST") {
     res.status(401).end();
   }
-  console.log(req.body.email);
-  res.status(200).end(); // 어떤 요청이 오든 staus 200을 보내고 연결을 끝냄(임시)
+  console.log(req.body);
+  res.status(200).end();
 }
