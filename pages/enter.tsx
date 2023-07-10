@@ -10,6 +10,7 @@ interface EnterForm {
 }
 
 export default function Enter() {
+  const [submitting, setSubmitting] = useState(false);
   const { register, handleSubmit, reset } = useForm<EnterForm>();
   const [method, setMethod] = useState<"email" | "phone">("email");
   const onEmailClick = () => {
@@ -20,7 +21,18 @@ export default function Enter() {
     reset();
     setMethod("phone");
   };
-  const onValid = (data: EnterForm) => {};
+  const onValid = (data: EnterForm) => {
+    setSubmitting(true);
+    fetch("/api/users/enter", {
+      method: "POST",
+      body: JSON.stringify(data), // console.log(req.body)로 {"email":"입력한 이메일"}을 출력할 수 있음
+      headers: {
+        "Content-Type": "application/json",
+      }, // headers를 써주면 req.body.email로 입력한 이메일도 콘솔출력이 가능
+    }).then(() => {
+      setSubmitting(false);
+    });
+  };
   return (
     <div className="px-4 mt-16">
       <h3 className="text-3xl font-bold text-center">Enter to Hole</h3>
@@ -79,7 +91,7 @@ export default function Enter() {
           ) : null}
           {method === "email" ? <Button text={"Get login link"} /> : null}
           {method === "phone" ? (
-            <Button text={"Get one-time password"} />
+            <Button text={submitting ? "Loading" : "Get one-time password"} />
           ) : null}
         </form>
         <div className="mt-8">

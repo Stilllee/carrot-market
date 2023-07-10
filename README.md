@@ -100,7 +100,7 @@
 ### #8 REFACTORING
 
 - [x] #8.0 Enter Form
-- [ ] #8.1 Form Submission
+- [x] #8.1 Form Submission
 - [ ] #8.2 Clean Code part One
 - [ ] #8.3 Clean Code part Two
 - [ ] #8.4 withHandler
