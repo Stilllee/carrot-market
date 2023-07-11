@@ -115,7 +115,7 @@
 - [x] #9.2 Token Logic
 - [x] #9.3 Twilo Setup
 - [x] #9.4 Sending SMS
-- [ ] #9.5 Sending Email
+- [x] #9.5 Sending Email
 - [ ] #9.6 Token UI
 - [ ] #9.7 Serverless Sessions
 - [ ] #9.8 Profile Handler
