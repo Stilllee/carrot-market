@@ -16,7 +16,7 @@ async function handler(
   const payload = Math.floor(100000 + Math.random() * 900000) + "";
   const token = await client.token.create({
     data: {
-      payload: "1234",
+      payload,
       user: {
         connectOrCreate: {
           where: {
@@ -31,20 +31,20 @@ async function handler(
     },
   });
   if (phone) {
-    const message = await twilioClient.messages.create({
+    // 테스트를 위한 주석처리
+    /* const message = await twilioClient.messages.create({
       messagingServiceSid: process.env.TWILIO_MSID,
       to: process.env.MY_PHONE!,
-      /*  
       // 실제 서비스에서는 phone을 작성해야 하지만, twilio trial 요금제를 쓰고 있기 때문에 그냥 내 핸드폰 번호만을 적어놓음
-      // typescript에게 MY_PHONE은 확실히 존재하는 변수라고 알려주기 위해 !를 붙임 
-      */
+      // typescript에게 MY_PHONE은 확실히 존재하는 변수라고 알려주기 위해 !를 붙임
       from: "+12345162429",
       body: `Your login token is ${payload}`,
     });
-    console.log(message);
+    console.log(message); */
   }
   if (email) {
-    const mailOptions = {
+    // 테스트를 위한 주석처리
+    /* const mailOptions = {
       from: process.env.MAIL_ADDRESS,
       to: email,
       subject: "Nomad Carrot Authentication Email",
@@ -63,7 +63,7 @@ async function handler(
       }
     );
     smtpTransport.close();
-    console.log(result);
+    console.log(result); */
   }
   return res.json({
     ok: true,

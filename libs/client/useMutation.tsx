@@ -2,13 +2,18 @@ import { PerformanceObserver } from "perf_hooks";
 import PreviousMap from "postcss/lib/previous-map";
 import { useState } from "react";
 
-export default function useMutation(
+interface UseMutationState<T> {
+  loading: boolean;
+  data?: T;
+  error?: object;
+}
+
+type UseMutationResult<T> = [(data: any) => void, UseMutationState<T>];
+
+export default function useMutation<T = any>(
   url: string
-): [
-  (data: any) => void,
-  { loading: boolean; data: undefined | any; error: undefined | any }
-] {
-  const [state, setState] = useState({
+): UseMutationResult<T> {
+  const [state, setState] = useState<UseMutationState<T>>({
     loading: false,
     data: undefined,
     error: undefined,
