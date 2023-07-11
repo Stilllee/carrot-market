@@ -28,7 +28,9 @@ export default function Enter() {
   };
   return (
     <div className="px-4 mt-16">
-      <h3 className="text-3xl font-bold text-center">Enter to Hole</h3>
+      <h3 className="text-3xl font-bold text-center dark:text-gray-300">
+        Enter to Hole
+      </h3>
       <div className="mt-8">
         <div className="flex flex-col items-center">
           <h5 className="text-sm text-gray-400">Enter using:</h5>
