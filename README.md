@@ -113,7 +113,7 @@
 - [x] #9.0 Introduction
 - [x] #9.1 Accounts Logic
 - [x] #9.2 Token Logic
-- [ ] #9.3 Twilo Setup
+- [x] #9.3 Twilo Setup
 - [ ] #9.4 Sending SMS
 - [ ] #9.5 Sending Email
 - [ ] #9.6 Token UI
