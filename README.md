@@ -104,14 +104,14 @@
 - [x] #8.2 Clean Code part One
 - [x] #8.3 Clean Code part Two
 - [x] #8.4 withHandler
-- [ ] #8.5 Paths
+- [x] #8.5 Paths
 
 ---
 
 ### #9 AUTHENTICATION
 
-- [ ] #9.0 Introduction
-- [ ] #9.1 Accounts Logic
+- [x] #9.0 Introduction
+- [x] #9.1 Accounts Logic
 - [ ] #9.2 Token Logic
 - [ ] #9.3 Twilo Setup
 - [ ] #9.4 Sending SMS
