@@ -16,8 +16,10 @@ const ItemDetail: NextPage = () => {
             </div>
           </div>
           <div className="mt-5">
-            <h1 className="text-3xl font-bold">Galaxy S50</h1>
-            <span className="block mt-3 text-3xl">$140</span>
+            <h1 className="text-3xl font-bold dark:text-gray-300">
+              Galaxy S50
+            </h1>
+            <span className="block mt-3 text-3xl dark:text-gray-400">$140</span>
             <p className="my-6 dark:text-gray-300">
               My money&apos;s in that office, right? If she start giving me some
               bullshit about it ain&apos;t there, and we got to go someplace
