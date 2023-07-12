@@ -129,7 +129,7 @@
 - [x] #10.0 Introduction
 - [x] #10.1 Protected Handlers
 - [x] #10.2 useUser Hook
-- [ ] #10.3 SWR
+- [x] #10.3 SWR
 - [ ] #10.4 useUser Refactor
 
 ---
