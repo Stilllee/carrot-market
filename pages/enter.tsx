@@ -2,7 +2,8 @@ import Button from "@/components/button";
 import Input from "@/components/input";
 import useMutation from "@/libs/client/useMutation";
 import { cls } from "@/libs/client/utils";
-import { useState } from "react";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
 interface EnterForm {
@@ -42,6 +43,14 @@ export default function Enter() {
     if (tokenLoading) return;
     confirmToken(validForm);
   };
+
+  // token을 confirm하는 과정을 거쳐 token이 존재하면 로그인 할 준비가 된 거고, home페이지로 새로고침하게 함
+  const router = useRouter();
+  useEffect(() => {
+    if (tokenData?.ok) {
+      router.push("/");
+    }
+  }, [tokenData, router]);
 
   return (
     <div className="px-4 mt-16">
