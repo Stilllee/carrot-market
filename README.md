@@ -120,14 +120,14 @@
 - [x] #9.7 Serverless Sessions
 - [x] #9.8 Profile Handler
 - [x] #9.9 Cleaning Code
-- [ ] #9.10 NextAuth
+- [x] #9.10 NextAuth
 
 ---
 
 ### #10 AUTHORIZATION
 
-- [ ] #10.0 Introduction
-- [ ] #10.1 Protected Handlers
+- [x] #10.0 Introduction
+- [x] #10.1 Protected Handlers
 - [ ] #10.2 useUser Hook
 - [ ] #10.3 SWR
 - [ ] #10.4 useUser Refactor
