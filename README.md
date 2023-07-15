@@ -136,7 +136,7 @@
 
 ### #11 PRODUCTS
 
-- [ ] #11.0 Product Model
+- [x] #11.0 Product Model
 - [ ] #11.1 Upload Form
 - [ ] #11.2 Upload API
 - [ ] #11.3 See Products
