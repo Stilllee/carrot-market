@@ -32,7 +32,7 @@ export default function Input({
             required={required}
             {...register}
             type={type}
-            className="w-full px-3 py-2 placeholder-gray-400 border rounded-md shadow-sm appearance-none dark:border-gray-100 dark:bg-black dark:text-white focus:outline-none focus:ring-main-blue focus:border-main-blue"
+            className="w-full px-3 py-2 placeholder-gray-400 border rounded-md shadow-sm appearance-none dark:border-gray-400 dark:bg-black dark:text-white focus:outline-none focus:ring-main-blue focus:border-main-blue"
           />
         </div>
       ) : null}
@@ -46,7 +46,7 @@ export default function Input({
             required={required}
             {...register}
             type={type}
-            className="w-full px-3 py-2 placeholder-gray-400 border rounded-md shadow-sm appearance-none dark:border-gray-100 dark:bg-black pl-7 focus:outline-none focus:ring-main-blue focus:border-main-blue dark:text-white"
+            className="w-full px-3 py-2 placeholder-gray-400 border rounded-md shadow-sm appearance-none dark:border-gray-400 dark:bg-black pl-7 focus:outline-none focus:ring-main-blue focus:border-main-blue dark:text-white"
           />
           <div className="absolute right-0 flex items-center pr-3 pointer-events-none">
             <span className="dark:text-gray-300">KRW</span>

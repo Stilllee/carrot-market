@@ -2,12 +2,27 @@ import Button from "@/components/button";
 import Input from "@/components/input";
 import Layout from "@/components/layout";
 import TextArea from "@/components/textarea";
+import useMutation from "@/libs/client/useMutation";
 import type { NextPage } from "next";
+import { useForm } from "react-hook-form";
+
+interface UploadProductForm {
+  name: string;
+  price: number;
+  description: string;
+}
 
 const Upload: NextPage = () => {
+  const { register, handleSubmit } = useForm<UploadProductForm>();
+  const [uploadProduct, { loading, data }] = useMutation("/api/products");
+  const onValid = (data: UploadProductForm) => {
+    if (loading) return;
+    uploadProduct(data);
+  };
+
   return (
     <Layout canGoBack title="Upload Product">
-      <form className="px-4 py-4 space-y-5">
+      <form onSubmit={handleSubmit(onValid)} className="px-4 py-4 space-y-5">
         <div>
           <label className="flex items-center justify-center w-full h-48 border-2 border-gray-400 border-dashed rounded-md cursor-pointer dark:text-gray-400 hover:text-main-blue hover:border-main-blue">
             <svg
@@ -28,17 +43,28 @@ const Upload: NextPage = () => {
           </label>
         </div>
         {/*  */}
-        <Input required label="Name" name="name" type="text" />
         <Input
+          register={register("name", { required: true })}
+          required
+          label="Name"
+          name="name"
+          type="text"
+        />
+        <Input
+          register={register("price", { required: true })}
           required
           label="Price"
-          placeholder="0.00"
           name="price"
           type="text"
           kind="price"
         />
-        <TextArea name="description" label="Description" />
-        <Button text="Upload item" />
+        <TextArea
+          register={register("description", { required: true })}
+          required
+          name="description"
+          label="Description"
+        />
+        <Button text={loading ? "Loading..." : "Upload item"} />
       </form>
     </Layout>
   );
