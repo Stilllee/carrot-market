@@ -139,8 +139,8 @@
 - [x] #11.0 Product Model
 - [x] #11.1 Upload Form
 - [x] #11.2 Upload API
-- [ ] #11.3 See Products
-- [ ] #11.4 Product Detail
+- [x] #11.3 See Products
+- [x] #11.4 Product Detail
 - [ ] #11.5 Related Products
 - [ ] #11.6 Favorite Products
 - [ ] #11.7 Favorite Products part Two

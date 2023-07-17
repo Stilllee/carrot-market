@@ -1,8 +1,20 @@
 import Button from "@/components/button";
 import Layout from "@/components/layout";
 import type { NextPage } from "next";
+import { useRouter } from "next/router";
+import useSWR from "swr";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+import Link from "next/link";
 
 const ItemDetail: NextPage = () => {
+  const router = useRouter();
+  console.log(router.query);
+  const { data } = useSWR(
+    router.query.id ? `/api/products/${router.query.id}` : null
+  );
+  console.log(data);
+
   return (
     <Layout canGoBack>
       <div className="px-4 py-4">
@@ -11,24 +23,26 @@ const ItemDetail: NextPage = () => {
           <div className="flex items-center py-3 space-x-3 border-t border-b cursor-pointer dark:border-gray-800">
             <div className="w-12 h-12 rounded-full bg-slate-100" />
             <div>
-              <p className="text-sm dark:text-gray-300">Steve Jebs</p>
-              <p className="text-xs dark:text-gray-400">View profile &rarr;</p>
+              <p className="text-sm dark:text-gray-300">
+                {data?.product?.user?.name || <Skeleton />}
+              </p>
+              <Link
+                href={`/users/profiles/${data?.product?.user?.id}`}
+                className="text-xs dark:text-gray-400"
+              >
+                View profile &rarr;
+              </Link>
             </div>
           </div>
           <div className="mt-5">
             <h1 className="text-3xl font-bold dark:text-gray-300">
-              Galaxy S50
+              {data?.product?.name || <Skeleton />}
             </h1>
-            <span className="block mt-3 text-3xl dark:text-gray-400">$140</span>
+            <span className="block mt-3 text-3xl dark:text-gray-400">
+              \{data?.product?.price || <Skeleton />}
+            </span>
             <p className="my-6 dark:text-gray-300">
-              My money&apos;s in that office, right? If she start giving me some
-              bullshit about it ain&apos;t there, and we got to go someplace
-              else and get it, I&apos;m gonna shoot you in the head then and
-              there. Then I&apos;m gonna shoot that bitch in the kneecaps, find
-              out where my goddamn money is. She gonna tell me too. Hey, look at
-              me when I&apos;m talking to you, motherfucker. You listen: we go
-              in there, and that ni**a Winston or anybody else is in there, you
-              the first motherfucker to get shot. You understand?
+              {data?.product?.description || <Skeleton />}
             </p>
             <div className="flex items-center justify-between space-x-2">
               <Button large text="Talk to seller" />
