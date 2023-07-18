@@ -6,14 +6,23 @@ import useSWR from "swr";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import Link from "next/link";
+import { Product, User } from "@prisma/client";
+
+interface ProductWithUser extends Product {
+  user: User;
+}
+
+interface ItemDetailResponse {
+  ok: boolean;
+  product: ProductWithUser;
+  relatedProducts: Product[];
+}
 
 const ItemDetail: NextPage = () => {
   const router = useRouter();
-  console.log(router.query);
-  const { data } = useSWR(
+  const { data } = useSWR<ItemDetailResponse>(
     router.query.id ? `/api/products/${router.query.id}` : null
   );
-  console.log(data);
 
   return (
     <Layout canGoBack>
@@ -38,8 +47,8 @@ const ItemDetail: NextPage = () => {
             <h1 className="text-3xl font-bold dark:text-gray-300">
               {data?.product?.name || <Skeleton />}
             </h1>
-            <span className="block mt-3 text-3xl dark:text-gray-400">
-              \{data?.product?.price || <Skeleton />}
+            <span className="mt-3 text-3xl dark:text-gray-400">
+              {data?.product?.price ? `₩${data?.product?.price}` : <Skeleton />}
             </span>
             <p className="my-6 dark:text-gray-300">
               {data?.product?.description || <Skeleton />}
@@ -69,13 +78,32 @@ const ItemDetail: NextPage = () => {
         <div>
           <h2 className="text-2xl font-bold">Similar items</h2>
           <div className="grid grid-cols-2 gap-4">
-            {[1, 2, 3, 4, 5, 6].map((_, i) => (
-              <div key={i}>
-                <div className="w-full h-56 mt-6 mb-4 bg-slate-100" />
-                <h3 className="-mb-1 dark:text-gray-300">Galaxy S60</h3>
-                <span className="text-mss">$6</span>
-              </div>
-            ))}
+            {data ? (
+              data?.relatedProducts.map((product) => (
+                <div key={product.id}>
+                  <div className="w-full h-56 mt-6 mb-4 bg-slate-100" />
+                  <h3 className="-mb-1 font-bold dark:text-gray-300">
+                    {product.name}
+                  </h3>
+                  <span className="text-sm font-bold dark:text-gray-100">
+                    ₩{product.price}
+                  </span>
+                </div>
+              ))
+            ) : (
+              <>
+                <div>
+                  <Skeleton height={224} className="w-full mt-6 mb-4" />
+                  <Skeleton className="-mb-1" />
+                  <Skeleton />
+                </div>
+                <div>
+                  <Skeleton height={224} className="w-full mt-6 mb-4" />
+                  <Skeleton className="-mb-1" />
+                  <Skeleton />
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
