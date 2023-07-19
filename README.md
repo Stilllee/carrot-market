@@ -146,7 +146,7 @@
 - [x] #11.7 Favorite Products part Two
 - [x] #11.8 Bound Mutations
 - [x] #11.9 Unbound Mutations
-- [ ] #11.10 Counting Relationships
+- [x] #11.10 Counting Relationships
 
 ---
 

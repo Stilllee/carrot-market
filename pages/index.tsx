@@ -7,15 +7,20 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import useSWR from "swr";
 
+interface ProductWithCount extends Product {
+  _count: {
+    favs: number;
+  };
+}
+
 interface ProductsResponse {
   ok: boolean;
-  products: Product[];
+  products: ProductWithCount[];
 }
 
 const Home: NextPage = () => {
   const { user, isLoading } = useUser();
   const { data } = useSWR<ProductsResponse>("/api/products");
-  console.log(data);
   return (
     <Layout title="홈" hasTabBar>
       <Head>
@@ -29,7 +34,7 @@ const Home: NextPage = () => {
             title={product.name}
             price={product.price}
             comments={1}
-            hearts={1}
+            hearts={product._count.favs}
           />
         ))}
         <FloatingButton href="/products/upload">
