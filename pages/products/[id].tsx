@@ -7,6 +7,8 @@ import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import Link from "next/link";
 import { Product, User } from "@prisma/client";
+import useMutation from "@/libs/client/useMutation";
+import { cls } from "@/libs/client/utils";
 
 interface ProductWithUser extends Product {
   user: User;
@@ -16,6 +18,7 @@ interface ItemDetailResponse {
   ok: boolean;
   product: ProductWithUser;
   relatedProducts: Product[];
+  isLiked: boolean;
 }
 
 const ItemDetail: NextPage = () => {
@@ -23,7 +26,10 @@ const ItemDetail: NextPage = () => {
   const { data } = useSWR<ItemDetailResponse>(
     router.query.id ? `/api/products/${router.query.id}` : null
   );
-
+  const [toggleFav] = useMutation(`/api/products/${router.query.id}/fav`);
+  const onFavClick = () => {
+    toggleFav({});
+  };
   return (
     <Layout canGoBack>
       <div className="px-4 py-4">
@@ -55,11 +61,19 @@ const ItemDetail: NextPage = () => {
             </p>
             <div className="flex items-center justify-between space-x-2">
               <Button large text="Talk to seller" />
-              <button className="flex items-center justify-center p-3 text-gray-500 transition-colors rounded-md dark:hover:bg-white hover:bg-gray-200 hover:text-main-blue">
+              <button
+                onClick={onFavClick}
+                className={cls(
+                  "flex items-center justify-center p-3  transition-colors rounded-md dark:hover:bg-white hover:bg-gray-200 ",
+                  data?.isLiked
+                    ? "text-main-blue hover:text-gray-500"
+                    : "text-gray-500 hover:text-main-blue"
+                )}
+              >
                 <svg
                   className="w-6 h-6 "
                   xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
+                  fill={data?.isLiked ? "currentColor" : "none"}
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                   aria-hidden="true"
